@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Overview of the Sustainable Development Goals</title>
+    <!-- Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-flip {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .card-flip-inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .card-flip:hover .card-flip-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .card-front {
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-back {
+            background-color: #f1f1f1;
+            transform: rotateY(180deg);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .footer-text {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .social-network {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-network li {
+            margin: 0 10px;
+        }
+
+        .social-network li a {
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .social-network li a:hover {
+            color: #007bff;
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header-section h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .header-section p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .top-header {
+            display: flex;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 20px 40px;
+        }
+
+        .top-header img {
+            max-height: 50px;
+            margin-right: 20px;
+        }
+
+        .top-header h4, .top-header h5 {
+            margin: 0;
+        }
+
+        .top-header h4 {
+            font-size: 1.5rem;
+        }
+
+        .top-header h5 {
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Header with Logo and Information -->
+    <div class="top-header">
+        <img src="logo.png" alt="Government of Tamil Nadu Logo">
+        <div>
+            <h4>Sustainable Development Goals</h4>
+            <h5>Planning and Development Department</h5>
+            <h5>Government of Tamil Nadu</h5>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">SDG Overview</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tnp.html">Initiatives Taken</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="header-section">
+        <h1>Explore the Sustainable Development Goals</h1>
+        <p>Learn about the global initiatives aiming to end poverty, protect the planet, and ensure prosperity for all.</p>
+    </section>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-5" id="sdgs">An Overview of the Sustainable Development Goals</h2>
+
+        <!-- SDGs Cards -->
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <!-- Goal 1 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal1.png" alt="No Poverty" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>Globally, the number of people living in extreme poverty has declined by more than half from 1.9 billion in 1990. However, 836 million people still live in extreme poverty.</p>
+                            <a href="goal-1.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 2 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal2.png" alt="Zero Hunger" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>One in nine people in the world still goes to bed hungry. Eradicating hunger and achieving food security is the foundation of peace and prosperity.</p>
+                            <a href="goal-2.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 3 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal3.png" alt="Good Health and Well-being" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>17,000 fewer children die each day than in 1990, but more than six million children still die before their fifth birthday each year.</p>
+                            <a href="goal-3.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 4 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal4.png" alt="Quality Education" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>Enrolment in primary education in developing countries has reached 91%, but 57 million children remain out of school.</p>
+                            <a href="goal-4.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 5 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal5.png" alt="Gender Equality" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>Globally, 1 in 3 women have experienced physical or sexual violence, most often by an intimate partner.</p>
+                            <a href="goal-5.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 6 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal6.png" alt="Clean Water and Sanitation" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>1 in 3 people worldwide do not have access to safe drinking water, and 2.4 billion people live without basic sanitation.</p>
+                            <a href="goal-6.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 7 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal7.png" alt="Affordable and Clean Energy" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>Nearly 1 billion people live without electricity, and more than 3 billion people rely on cooking with polluting fuels.</p>
+                            <a href="goal-7.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 8 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal8.png" alt="Decent Work and Economic Growth" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>Global unemployment rates remain high, especially among youth. Sustainable economic growth is key to achieving prosperity for all.</p>
+                            <a href="goal-8.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 9 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal9.png" alt="Industry, Innovation, and Infrastructure" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>Investment in infrastructure and innovation is critical for the growth of developing countries and sustainable economies.</p>
+                            <a href="goal-9.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 10 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal10.png" alt="Reduced Inequality" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>Inequalities in wealth, education, and opportunity continue to be a challenge. Reducing inequality is critical for sustainable development.</p>
+                            <a href="goal-10.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 11 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal11.png" alt="Sustainable Cities and Communities" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>More than half of the world's population lives in cities, and urbanization is rapidly increasing. Sustainable cities are key to improving quality of life.</p>
+                            <a href="goal-11.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 12 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal12.png" alt="Responsible Consumption and Production" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>Resource efficiency is crucial for a sustainable future. We need to reduce waste, increase recycling, and promote sustainable consumption practices.</p>
+                            <a href="goal-12.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 13 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal13.png" alt="Climate Action" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>Climate change is one of the biggest challenges facing the world. Immediate action is necessary to mitigate its impact and protect the environment.</p>
+                            <a href="goal-13.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 14 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal14.png" alt="Life Below Water" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>Marine life is threatened by overfishing, pollution, and climate change. We must take action to preserve oceans and marine ecosystems.</p>
+                            <a href="goal-14.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 15 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal15.png" alt="Life on Land" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>Forests, biodiversity, and ecosystems face unprecedented threats. Protecting life on land is vital for a sustainable future.</p>
+                            <a href="goal-15.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 16 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal16.png" alt="Peace, Justice, and Strong Institutions" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>Strong institutions and a peaceful society are essential for sustainable development. Corruption, inequality, and injustice hinder progress.</p>
+                            <a href="goal-16.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goal 17 -->
+            <div class="col">
+                <div class="card-flip">
+                    <div class="card-flip-inner">
+                        <div class="card-front">
+                            <img src="goal17.png" alt="Partnerships for the Goals" class="img-fluid">
+                        </div>
+                        <div class="card-back">
+                            <p>Achieving the SDGs requires collaboration at all levels. Partnerships and global cooperation are essential for a better world.</p>
+                            <a href="goal-17.html" class="btn btn-primary">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      <!-- Main Content Section -->
+  <section class="container my-5">
+    <h2>History</h2>
+    <p>
+        The 2030 Agenda for Sustainable Development, adopted by all United Nations Member States in 2015, provides a shared blueprint for peace and prosperity for people and the planet, now and into the future. At its heart are the 17 Sustainable Development Goals (SDGs), which are an urgent call for action by all countries - developed and developing - in a global partnership. They recognize that ending poverty and other deprivations must go hand-in-hand with strategies that improve health and education, reduce inequality, and spur economic growth – all while tackling climate change and working to preserve our oceans and forests.
+    </p>
+
+    <p>
+        The SDGs build on decades of work by countries and the UN, including the UN Department of Economic and Social Affairs.
+    </p>
+
+    <h3>Major Milestones</h3>
+    <ul>
+        <li>In June 1992, at the Earth Summit in Rio de Janeiro, Brazil, more than 178 countries adopted Agenda 21.</li>
+        <li>In 2000, the Millennium Declaration was adopted, leading to the Millennium Development Goals (MDGs).</li>
+        <li>In 2002, the Johannesburg Declaration on Sustainable Development emphasized multilateral partnerships.</li>
+        <li>In 2012, the Rio+20 conference began the process to develop the SDGs.</li>
+        <li>In 2015, the 2030 Agenda for Sustainable Development with the 17 SDGs was adopted by the UN.</li>
+    </ul>
+
+    <h3>Implementation Progress</h3>
+    <p>
+        Every year, the UN Secretary General presents an annual SDG Progress report, developed in cooperation with the UN System. These reports help track the progress of SDGs based on indicators and data from national and regional levels.
+    </p>
+    <p>
+        Please check below for the most recent SDG Progress Reports:
+        <ul>
+            <li><a href="https://unstats.un.org/sdgs#">SDG Progress Report (2024)</a></li>
+            <li><a href="https://unstats.un.org/sdgs#">SDG Progress Report (2023)</a></li>
+            <li><a href="https://unstats.un.org/sdgs#">SDG Progress Report (2022)</a></li>
+            <!-- Add more links as required -->
+        </ul>
+    </p>
+    
+    <h3>Global Sustainable Development Report</h3>
+    <p>
+        Additionally, the Global Sustainable Development Report is produced every four years to inform the quadrennial SDG review deliberations at the UN General Assembly. It is written by an Independent Group of Scientists appointed by the UN Secretary-General.
+    </p>
+    <p>
+        <ul>
+            <li><a href="https://unstats.un.org/sdgs#">Global Sustainable Development Report (2019)</a></li>
+            <li><a href="https://unstats.un.org/sdgs#">Global Sustainable Development Report (2023)</a></li>
+        </ul>
+    </p>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h3>Planning and Development Department</h3>
+        <div class="footer-text">
+            <p>Planning and Development Department is primarily responsible for the State’s Plan preparations, Monitoring, and Review of expenditures in State Plan Schemes, Poverty Alleviation Programmes, Twenty Point Programme, and Centrally Sponsored Schemes.</p>
+        </div>
+        <ul class="social-network">
+            <li><a href="#" title="Facebook">F</a></li>
+            <li><a href="#" title="Twitter">T</a></li>
+            <li><a href="#" title="Linkedin">L</a></li>
+            <li><a href="#" title="Pinterest">P</a></li>
+            <li><a href="#" title="Google plus">G</a></li>
+        </ul>
+    </footer>
+
+    <!-- Bootstrap JS & Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

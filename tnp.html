@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamil Nadu Environmental Initiatives</title>
+    <!-- Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-flip {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .card-flip-inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .card-flip:hover .card-flip-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .card-front {
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-back {
+            background-color: #f1f1f1;
+            transform: rotateY(180deg);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .footer-text {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .social-network {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-network li {
+            margin: 0 10px;
+        }
+
+        .social-network li a {
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .social-network li a:hover {
+            color: #007bff;
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header-section h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .header-section p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .top-header {
+            display: flex;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 20px 40px;
+        }
+
+        .top-header img {
+            max-height: 50px;
+            margin-right: 20px;
+        }
+
+        .top-header h4, .top-header h5 {
+            margin: 0;
+        }
+
+        .top-header h4 {
+            font-size: 1.5rem;
+        }
+
+        .top-header h5 {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .scrolling-container {
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            white-space: nowrap;
+            padding: 20px 0;
+        }
+
+        .scrolling-container img {
+            margin-right: 20px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .scrolling-container {
+            animation: scroll 60s linear infinite;
+        }
+
+        .main-content img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .main-content {
+            padding-top: 20px;
+        }
+
+        .main-content h2,
+        .main-content h3 {
+            margin-top: 30px;
+        }
+
+        .initiative {
+            margin-bottom: 30px;
+        }
+
+        .sdg-logo {
+            width: 15px;
+            height: auto;
+            margin-left: 20px;
+        }
+
+        .initiative img {
+            margin-bottom: 20px;
+        }
+
+        .initiative p {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Header with Logo and Information -->
+    <div class="top-header">
+        <img src="logo.png" alt="Government of Tamil Nadu Logo">
+        <div>
+            <h4>Sustainable Development Goals</h4>
+            <h5>Planning and Development Department</h5>
+            <h5>Government of Tamil Nadu</h5>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">SDG Overview</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#initiatives">Initiatives</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#performance">Performance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tamil Nadu Initiatives Section -->
+    <section id="initiatives" class="container mt-5">
+        <h1>Tamil Nadu Environmental Initiatives</h1>
+
+        <!-- Initiative 1: Continuous Ambient Air Quality Monitoring Station (CAAQMS) -->
+        <div class="initiative mt-4">
+            <h3>1. Continuous Ambient Air Quality Monitoring Station (CAAQMS)</h3>
+            <div class="d-flex">
+                <img src="I1.jpg" alt="CAAQMS" class="img-fluid" style="width: 30%; height: auto;">
+                <img src="goal13.png" alt="SDG Goal 13" style="width: 70px; height: 75px; margin-left: 20px;">
+            </div>
+            <p><strong>SDG: Goal 13 - Climate Action</strong></p>
+            <ul>
+                <li>CAAQMS is set up to monitor the air quality in real-time, providing data on pollutants to aid in environmental management.</li>
+                <li>Helps reduce air pollution and promotes clean air in urban areas.</li>
+                <li>Initiative launched in 2019 to monitor urban air quality effectively.</li>
+                <li>Helps assess air pollution and enables timely corrective actions to improve air quality.</li>
+            </ul>
+        </div>
+
+        <!-- Initiative 2: Mobile Continuous Ambient Air Quality Monitoring Station -->
+        <div class="initiative mt-4">
+            <h3>2. Mobile Continuous Ambient Air Quality Monitoring Station</h3>
+            <div class="d-flex">
+                <img src="I2.jpg" alt="Mobile CAAQMS" class="img-fluid" style="width: 50%; height: auto;">
+                <img src="goal13.png" alt="SDG Goal 13" style="width: 70px; height: 75px; margin-left: 20px;">
+            </div>
+            <p><strong>SDG: Goal 13 - Climate Action</strong></p>
+            <ul>
+                <li>This mobile unit monitors air quality across different regions, enabling quicker response to air quality issues.</li>
+                <li>Helps in reducing environmental pollution and promoting sustainable development.</li>
+                <li>Launched in 2021 as part of efforts to provide mobile solutions for environmental monitoring.</li>
+                <li>Provides real-time air quality data and alerts for immediate action in response to pollution spikes.</li>
+            </ul>
+        </div>
+
+        <!-- Initiative 3: Bhogi Awareness Campaign -->
+        <div class="initiative mt-4">
+            <h3>3. Bhogi Awareness Campaign</h3>
+            <div class="d-flex">
+                <img src="I3.jpg" alt="Bhogi Awareness" class="img-fluid" style="width: 50%; height: auto;">
+                <img src="goal12.png" alt="SDG Goal 12" style="width: 70px; height: 75px; margin-left: 20px;">
+            </div>
+            <p><strong>SDG: Goal 12 - Responsible Consumption and Production</strong></p>
+            <ul>
+                <li>The campaign educates the public on the environmental impact of traditional practices and promotes cleaner alternatives.</li>
+                <li>Helps reduce pollution and promote responsible consumption habits among citizens.</li>
+                <li>Started in 2020 with a focus on reducing firecracker usage during festivals.</li>
+                <li>Aims to educate citizens on environmentally safe practices during festive seasons.</li>
+            </ul>
+        </div>
+
+        <!-- Initiative 4: Care Air Centre (CAC) -->
+        <div class="initiative mt-4">
+            <h3>4. Care Air Centre (CAC)</h3>
+            <div class="d-flex">
+                <img src="I4.jpg" alt="Care Air Centre" class="img-fluid" style="width: 50%; height: auto;">
+                <img src="goal13.png" alt="SDG Goal 13" style="width: 70px; height: 75px; margin-left: 20px;">
+            </div>
+            <p><strong>SDG: Goal 13 - Climate Action</strong></p>
+            <ul>
+                <li>The Care Air Centre is dedicated to monitoring and improving air quality in urban areas, reducing health impacts.</li>
+                <li>Provides data and recommendations for improving air quality policies and practices.</li>
+                <li>Set up in 2022, focusing on collaboration with local authorities to improve air quality standards.</li>
+            </ul>
+        </div>
+
+        <!-- Initiative 5: Online Water Quality Monitoring System in River Cauvery -->
+        <div class="initiative mt-4">
+            <h3>5. Online Water Quality Monitoring System in River Cauvery</h3>
+            <div class="d-flex">
+                <img src="I5.jpg" alt="Water Quality Monitoring" class="img-fluid" style="width: 50%; height: auto;">
+                <img src="goal6.png" alt="SDG Goal 6" style="width: 70px; height: 75px; margin-left: 20px;">
+            </div>
+            <p><strong>SDG: Goal 6 - Clean Water and Sanitation</strong></p>
+            <ul>
+                <li>The system tracks the water quality of the River Cauvery, ensuring safe water for consumption and irrigation.</li>
+                <li>Helps ensure water sustainability by monitoring pollution levels in real time.</li>
+                <li>Initiated in 2020 to provide live updates on water quality in a critical water resource area.</li>
+            </ul>
+        </div>
+
+        <!-- Initiative 6: Common Effluent Treatment Plant & Zero Liquid Discharge -->
+        <div class="initiative mt-4">
+            <h3>6. Common Effluent Treatment Plant & Zero Liquid Discharge</h3>
+            <div class="d-flex">
+                <img src="I6.jpg" alt="Effluent Treatment" class="img-fluid" style="width: 50%; height: auto;">
+                <img src="goal6.png" alt="SDG Goal 6" style="width: 70px; height: 75px; margin-left: 20px;">
+            </div>
+            <p><strong>SDG: Goal 6 - Clean Water and Sanitation</strong></p>
+            <ul>
+                <li>This plant treats industrial effluents to reduce water pollution, promoting sustainable water use in industries.</li>
+                <li>Supports Zero Liquid Discharge to ensure that no untreated water is released into the environment.</li>
+                <li>Launched in 2021 as part of Tamil Nadu's push for sustainable industrial practices.</li>
+            </ul>
+        </div>
+
+        <!-- Initiative 7: Training Programs for Environmental Regulatory Compliance -->
+        <div class="initiative mt-4">
+            <h3>7. Training Programmes for Environmental Regulatory Compliance</h3>
+            <div class="d-flex">
+                <img src="I7.jpg" alt="Training Programs" class="img-fluid" style="width: 50%; height: auto;">
+                <img src="goal4.png" alt="SDG Goal 4" style="width: 70px; height: 75px; margin-left: 20px;">
+            </div>
+            <p><strong>SDG: Goal 4 - Quality Education</strong></p>
+            <ul>
+                <li>Training programs educate industries on compliance with environmental regulations, focusing on sustainable practices.</li>
+                <li>Promotes awareness and adherence to environmental laws for better environmental governance.</li>
+                <li>Started in 2018 to enhance understanding of environmental regulations and promote best practices.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 Tamil Nadu Government. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
